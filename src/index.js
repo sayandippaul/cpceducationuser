@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Navbar from './Navbar';
+import Loginsignup from './Loginsignup';
+// import Header from './Header';
+import  { Component } from 'react';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import Mainpage from './Mainpage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+{/* <Header></Header> */}
+{/* <Userpage></Userpage> */}
+    <Navbar></Navbar>
+{/* <Mainpage></Mainpage> */}
+{/* <Loginsignup></Loginsignup> */}
   </React.StrictMode>
 );
 
