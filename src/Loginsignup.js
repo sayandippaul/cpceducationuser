@@ -1,6 +1,8 @@
 import Navbar from './Navbar';
 import Mainpage from './Mainpage';
 import React, { useState, useEffect } from 'react';
+import { url } from './url.js';
+import { userurl } from './userurl.js';
 
 function Loginsignup()
 {
@@ -25,7 +27,7 @@ function Loginsignup()
     var [adminid, setadminid] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost:3000/showadmin", {
+        fetch(url+"/showadmin", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -66,7 +68,7 @@ function Loginsignup()
       // console.log("hi"+user.username);
       console.log(user);
 
-      fetch("http://localhost:3000/loginuserpage", {
+      fetch(url+"/loginuserpage", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -110,7 +112,8 @@ function Loginsignup()
       //         // location.reload();
       // window.location.reload();
       alert("Welcome "+ data[0].name);
-      window.location.replace("http://localhost:3001");
+      // window.location.replace("http://localhost:3001");
+      window.location.replace(userurl);
 
 
 
@@ -143,7 +146,7 @@ function Loginsignup()
   e.preventDefault();
   const user = { cpcid: cpcid1, password: pass1,address:address,phone:phone,name:name };
 
-  fetch("http://localhost:3000/registerstudentuserpage", {
+  fetch(url+"/registerstudentuserpage", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -184,7 +187,9 @@ function Loginsignup()
       localStorage.setItem("logged",1);
       localStorage.setItem("cpcid",cpcid1);
 
-      window.location.replace("http://localhost:3001");
+      // window.location.replace("http://localhost:3001");
+      window.location.replace(userurl);
+
 
 
         }

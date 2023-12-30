@@ -1,0 +1,8 @@
+// export var url = 'http://localhost:3000';
+export var userurl = 'https://cpc-education.vercel.app/';
+// export function doSomething() {
+//   alert('Something happened!');
+// }
+// url+"
+// "http://localhost:3000
+// import { url } from './url.js';

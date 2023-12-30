@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { url } from './url.js';
 
 
 function Contact(){
@@ -24,7 +25,7 @@ function Contact(){
     var [adminid, setadminid] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost:3000/showadmin", {
+        fetch(url+"/showadmin", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -80,7 +81,7 @@ function Contact(){
               console.log(feedback);
               // var  text = { username: name, email: email, month: month,amount:amount,batch:batch };
                   
-              fetch("http://localhost:3000/Addfeedback", {
+              fetch(url+"/Addfeedback", {
                   method: "POST",
                   headers: {
                       Accept: "application/json",

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Userpage from "./Navbar";
 import Loginsignup from "./Loginsignup";
+import { url } from './url.js';
 
 import { useState, useEffect, useRef } from "react";
 
@@ -24,7 +25,7 @@ function Aboutcourse() {
         const user = { courseid: courseid };
 
         if (courseid != 0) {
-            fetch("http://localhost:3000/aboutcourse", {
+            fetch(url+"/aboutcourse", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -63,7 +64,7 @@ function Aboutcourse() {
         console.log(admission);
         // var  text = { username: name, email: email, month: month,amount:amount,batch:batch };
   
-        fetch("http://localhost:3000/Addadmission", {
+        fetch(url+"/Addadmission", {
             method: "POST",
             headers: {
                 Accept: "application/json",

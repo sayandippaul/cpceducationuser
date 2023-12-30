@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Userpage from './Navbar';
 import Loginsignup from './Loginsignup';
+import { url } from './url.js';
+import { userurl } from './userurl.js';
 
 import { useState, useEffect, useRef } from "react";
 
@@ -49,7 +51,7 @@ function Profile() {
         if (dataFetchedRef.current) return;
         dataFetchedRef.current = true;
 
-        fetch("http://localhost:3000/loginid", {
+        fetch(url+"/loginid", {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -83,7 +85,7 @@ function Profile() {
 
         function showcourses(c){
 
-            fetch("http://localhost:3000/showcourses", {
+            fetch(url+"/showcourses", {
                 method: "GET",
                 headers: {
                   Accept: "application/json",
@@ -152,7 +154,7 @@ if(a[i].status=='0'|| a[i].status==0){
         console.log(user);
 
         var studentbatch = [];
-        fetch("http://localhost:3000/updatestudentuserpage", {
+        fetch(url+"/updatestudentuserpage", {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -167,7 +169,9 @@ if(a[i].status=='0'|| a[i].status==0){
             .then(data => {
                 // window.location.replace("")
                 alert("User Updated");
-      window.location.replace("http://localhost:3001/Profile");
+    //   window.location.replace("http://localhost:3001/Profile");
+    window.location.replace(userurl+"/Profile");
+
 
             })
             .catch(err => console.log(err));

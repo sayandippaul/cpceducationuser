@@ -1,6 +1,7 @@
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import Userpage from './Navbar';
 import Loginsignup from './Loginsignup';
+import { url } from './url.js';
 
 import { useState, useEffect, useRef } from "react";
 
@@ -46,7 +47,7 @@ function Mainpage() {
     var [adminid, setadminid] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost:3000/showadmin", {
+        fetch(url+"/showadmin", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -88,7 +89,7 @@ function Mainpage() {
       if (dataFetchedRef.current) return;
       dataFetchedRef.current = true;
 
-      fetch("http://localhost:3000/loginid", {
+      fetch(url+"/loginid", {
           method: "POST",
           headers: {
               Accept: "application/json",
@@ -125,7 +126,7 @@ function Mainpage() {
 
 
     
-    fetch("http://localhost:3000/showstudentfees", {
+    fetch(url+"/showstudentfees", {
     method: "GET",
     headers: {
       Accept: "application/json",

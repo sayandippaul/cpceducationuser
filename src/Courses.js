@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { url } from './url.js';
+import { userurl } from './userurl.js';
+
 function Courses() {
   
 
@@ -11,7 +14,7 @@ localStorage.setItem("courseid",0);
 
     const coursecata = { catagory: cata };
 
-    fetch("http://localhost:3000/showcourses", {
+    fetch(url+"/showcourses", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -39,7 +42,8 @@ localStorage.setItem("courseid",0);
 
   function aboutcourse(cid){
 localStorage.setItem("courseid",cid);
-window.location.replace("http://localhost:3001/Aboutcourse");
+// window.location.replace("http://localhost:3001/Aboutcourse");
+window.location.replace(userurl+"/Aboutcourse");
 
     console.error(cid);
     }
@@ -55,7 +59,7 @@ window.location.replace("http://localhost:3001/Aboutcourse");
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
 
-    // fetch("http://localhost:3000/showcourses", {
+    // fetch(url+"/showcourses", {
     //   method: "GET",
     //   headers: {
     //     Accept: "application/json",

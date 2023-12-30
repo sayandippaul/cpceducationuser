@@ -5,9 +5,11 @@ import Courses from './Courses';
 import Loginsignup from './Loginsignup';
 import Mainpage from './Mainpage';
 import Profile from './Profile';
+import { url } from './url.js';
+import { userurl } from './userurl.js';
 
 function Navbar() {
-  fetch("http://localhost:3000/lastcpcid", {
+  fetch(url+"/lastcpcid", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -152,7 +154,9 @@ function Navbar() {
     localStorage.setItem("logged",0);
     localStorage.setItem("cpcid","");
     // window.location.replace();
-    window.location.replace("http://localhost:3001");
+    // window.location.replace("http://localhost:3001");
+    window.location.replace(userurl);
+
 
 
   }
