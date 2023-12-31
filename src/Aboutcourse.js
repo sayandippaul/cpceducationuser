@@ -20,6 +20,52 @@ function Aboutcourse() {
     var [email, setemail] = useState("");
     var [phone, setphone] = useState("");
 
+    function getcursor(cid, cname, catavalue, cfees) {
+    
+            const admission = {
+    
+                coursename: cname,
+                studentname: name,
+                email: email,
+                phone: phone,
+                coursecatagory: catavalue,
+                coursefees: cfees,
+                courseid: cid,
+            };
+            console.log(admission);
+            // var  text = { username: name, email: email, month: month,amount:amount,batch:batch };
+      
+            fetch(url+"/Addadmission", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Headers": "Content-Type",
+                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                    "Access-Control-Allow-Origin": "*",
+                },
+                body: JSON.stringify(admission),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    // window.location.replace("login.js");
+                    // alert(data);
+                    if (data!= 0) {
+                        alert("You Have Registered This course.Check Email for Approval. ");
+                        // window.location.href = userurl;
+          window.location.replace(userurl);
+                        
+                    } else {
+                        alert("Another course already exists with this email id.");
+                    }
+                    // alert("success");
+                })
+                .catch((err) => console.log(err));
+        
+    
+    }
+    
+
     const dataFetchedRef = useRef(false);
 
     //    const user={cpcid:"cpc12345"};
@@ -57,49 +103,7 @@ function Aboutcourse() {
         // });
     }, []);
 
-    function getcursor(cid, cname, catavalue, cfees) {
-        const admission = {
-            coursename: cname,
-            studentname: name,
-            email: email,
-            phone: phone,
-            coursecatagory: catavalue,
-            coursefees: cfees,
-            courseid: cid,
-        };
-        console.log(admission);
-        // var  text = { username: name, email: email, month: month,amount:amount,batch:batch };
-  
-        fetch(url+"/Addadmission", {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-                "Access-Control-Allow-Origin": "*",
-            },
-            body: JSON.stringify(admission),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                // window.location.replace("login.js");
-                // alert(data);
-                if (data!= 0) {
-                    alert("You Have Registered This course.Check Email for Approval. ");
-                    // window.location.href = '/Courses'
-      window.location.replace(userurl+"/");
-                    
-                } else {
-                    alert("Another course already exists with this email id.");
-                }
-                // alert("success");
-            })
-            .catch((err) => console.log(err));
-    
-
-}
-
+   
     return (
         <>
             <div id="aboutcourse">
@@ -166,7 +170,7 @@ function Aboutcourse() {
                                                                         course.coursecatagory,
                                                                         course.coursefees
                                                                     )
-                                                                } id="contact" action method="post">
+                                                                } id="contact" >
                                                 <div className="row">
                                                     <div className="col-lg-12">
                                                         <h2>Register For EnrollMent</h2>
@@ -215,6 +219,7 @@ function Aboutcourse() {
                                                     <div className="col-lg-12">
                                                         <fieldset>
                                                             <button   className="button"
+                                                            type="submit"
                                                             >
                                                                 Register For This Course
                                                             </button>
