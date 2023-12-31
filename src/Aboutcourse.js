@@ -88,7 +88,7 @@ function Aboutcourse() {
                 if (data!= 0) {
                     alert("You Have Registered This course.Check Email for Approval. ");
                     // window.location.href = '/Courses'
-      window.location.replace(userurl);
+      window.location.replace(userurl+"/");
                     
                 } else {
                     alert("Another course already exists with this email id.");
