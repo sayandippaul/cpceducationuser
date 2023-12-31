@@ -2,13 +2,19 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Userpage from "./Navbar";
 import Loginsignup from "./Loginsignup";
 import { url } from './url.js';
+import { userurl } from './userurl.js';
+
 
 import { useState, useEffect, useRef } from "react";
 
 function Aboutcourse() {
     function enrollcourse() {
         updateorshow();
+    // document.getElementById("focusname").focus();
+    // document.getElementById("focusname").focus({ focusVisible: true });
+
     }
+
     var [course, setdata] = useState([]);
     var [name, setname] = useState("");
     var [email, setemail] = useState("");
@@ -81,7 +87,9 @@ function Aboutcourse() {
                 // alert(data);
                 if (data!= 0) {
                     alert("You Have Registered This course.Check Email for Approval. ");
-                    window.location.href = '/Courses'
+                    // window.location.href = '/Courses'
+      window.location.replace(userurl);
+                    
                 } else {
                     alert("Another course already exists with this email id.");
                 }
@@ -128,6 +136,7 @@ function Aboutcourse() {
                                             <div className="main-button-red">
                                                 <a
                                                     style={{ color: "white" }}
+                                                    href="#showbox"
                                                     onClick={() => enrollcourse()}
                                                 >
                                                     Enroll This Course
@@ -140,7 +149,7 @@ function Aboutcourse() {
                         </div>
                     </section>
 
-                    <section className="contact-us">
+                    <section id="showbox" className="contact-us">
                         <div
                             style={{ display: "none" }}
                             id="updatebox"
@@ -167,7 +176,7 @@ function Aboutcourse() {
                                                         <fieldset>
                                                             <input
                                                                 type="text"
-                                                                id="subject"
+                                                                id="focusname"
                                                                 onChange={(e) => setname(e.target.value)}
                                                                 placeholder="Enter Full Name"
                                                                 required
@@ -178,11 +187,13 @@ function Aboutcourse() {
                                                         Phone Number
                                                         <fieldset>
                                                             <input
-                                                                type="number"
+                                                                type="tel"
                                                                 onChange={(e) => setphone(e.target.value)}
                                                                 id="subject"
                                                                 placeholder="Enter Phone Number"
                                                                 required
+                                                                pattern="[6-9]{1}[0-9]{9}"
+                                                                maxLength={"10"}
                                                             />
                                                         </fieldset>
                                                     </div>
@@ -192,7 +203,7 @@ function Aboutcourse() {
                                                             <input
                                                                 name="email"
                                                                 onChange={(e) => setemail(e.target.value)}
-                                                                type="text"
+                                                                type="email"
                                                                 id="email"
                                                                 pattern="[^ @]*@[^ @]*"
                                                                 placeholder="Enter Email Id"
@@ -269,6 +280,7 @@ function Aboutcourse() {
 }
 function updateorshow() {
     document.getElementById("updatebox").style.display = "block";
+    // document.getElementById("updatebox").focus();
 }
 
 export default Aboutcourse;
