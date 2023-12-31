@@ -122,21 +122,30 @@ window.location.replace(userurl+"/Aboutcourse");
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="filters">
+
                       <ul>
-                        <li id="all" onClick={() =>showcourses("all")} data-filter="*" className="active">
+
+
+                        <li style={{"margin":"5px"}} id="all" onClick={() =>showcourses("all")} data-filter="*" className="active">
                           All Courses
                         </li>
-                        <li id="basic" onClick={() =>showcourses("basic")} data-filter="*" className="">
-                          Basic
+                        <li style={{"margin":"5px"}} id="programming/backend" onClick={() =>showcourses("programming/backend")} data-filter="*" className="">
+                        Programming/Backend
                         </li>
-                        <li id="programming" onClick={() =>showcourses("programming")} data-filter="*" className="">
-                          Programming
+                        <li style={{"margin":"5px"}} id="designing/frontend" onClick={() =>showcourses("designing/frontend")} data-filter="*" className="">
+                        Designing/Frontend
                         </li>
-                        <li id="designing" onClick={() =>showcourses("designing")} data-filter="*" className="">
-                          Designing
+                        <li style={{"margin":"5px"}} id="jobpreparation" onClick={() =>showcourses("jobpreparation")} data-filter="*" className="">
+                       Job Preparation
                         </li>
-                        <li id="database" onClick={() =>showcourses("database")} data-filter="*" className="">
-                          Database
+                        <li style={{"margin":"5px"}} id="industrybaseddevelopment" onClick={() =>showcourses("industrybaseddevelopment")} data-filter="*" className="">
+                        Industry Based Development
+                        </li>
+                        <li style={{"margin":"5px"}} id="frameworks" onClick={() =>showcourses("frameworks")} data-filter="*" className="">
+                        Frameworks
+                        </li>
+                        <li style={{"margin":"5px"}} id="finalyearprojects" onClick={() =>showcourses("finalyearprojects")} data-filter="*" className="">
+                        Final Year Projects
                         </li>
                         
                          </ul>
