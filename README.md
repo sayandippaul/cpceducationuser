@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 📚 CPC Education – Coaching Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CPC Education is a full-stack web application developed as part of my internship project for **Mr. Anup Kumar Paswan** to help digitize and automate the coaching institute’s operations. It streamlines **course admissions**, **student management**, **automated fee receipts**, and **admin control**, enabling smooth online interaction between students and coaching administrators.
 
-## Available Scripts
 
-In the project directory, you can run:
+This is website github for all the students  
+---
 
-### `npm start`
+## 🔗 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🌐 **Student Portal**: [https://cpc-education.vercel.app](https://cpc-education.vercel.app)
+- 🔐 **Admin Portal**: [https://cpceducationadmin.vercel.app](https://cpceducationadmin.vercel.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🧑‍🎓 Student Platform
+- Sign up / Login
+- Explore available courses
+- View course details and prices
+- Send admission requests
+- Access personal dashboard with course, events, and fee updates
+- Receive automated fee receipts via email
 
-### `npm run build`
+### 👨‍🏫 Admin Platform (For Coaching Owner)
+- Secure Admin Login
+- Dashboard Overview:
+  - Total Students
+  - Monthly Payments
+  - Courses Offered
+  - Certificates Issued
+- Manage:
+  - Courses
+  - Students
+  - Payment Records
+  - Batches
+  - Feedback & Enquiries
+  - Certification Issuance (Till not implemented)
+- Auto-generate fee receipts and send via email (using Gmail API + PDF Maker)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Frontend        | Backend       | Database       | APIs & Tools           | Deployment         |
+|-----------------|---------------|----------------|-------------------------|---------------------|
+| React.js        | Node.js       | MongoDB Atlas  | Gmail API (Email)       | Vercel (Frontend)   |
+| HTML / CSS      | Express.js    |                | PDF Maker API (Receipts)| Render (Backend)    |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📩 Email & PDF Automation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Gmail API**: Sends fee receipts directly to the student’s registered email.
+- **PDF Generator API**: Dynamically generates and formats the fee receipts as PDFs before sending.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 📁 Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+cpc-education/
+├── public/              # React frontend (Student)
+├── src/         # React frontend (Admin)
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🚀 How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/cpc-education.git
+cd cpc-education
+```
 
-### Analyzing the Bundle Size
+### 2. Setup Backend
+```bash
+cd server
+npm install
+# Create `.env` file with MongoDB URI, Gmail API Keys, etc.
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Setup Frontend (Student)
+```bash
+cd client
+npm install
+npm run dev
+```
 
-### Making a Progressive Web App
+### 4. Setup Admin Panel
+```bash
+cd admin-panel
+npm install
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📦 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Role-based access control (RBAC)
+- SMS integration for notifications
+- Certificate auto-generation and delivery
+- Better analytics dashboard (charts, graphs)
+- Admin activity logs
+- Student attendance tracking
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🙋‍♂️ Author
+
+**Sayandip Paul**  
+B.Tech in Information Technology (2022–2026)  
+Kalyani Government Engineering College  
+🔗 [LinkedIn](https://www.linkedin.com/in/sayandip-paul-4b66aa220) • [GitHub](https://github.com/sayandippaul)
+
+---
