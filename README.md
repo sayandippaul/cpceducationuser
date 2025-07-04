@@ -57,22 +57,20 @@ This is website github for all the students
 
 ---
 
-## 🖼️ Images
+## 🖼️ Screenshots
 
-### 📌 Student Portal
+### 🎓 Student Portal
 
-!(img/photo_1_2025-07-04_22-53-03.jpg)
-!(img/photo_2_2025-07-04_22-53-03.jpg)
-img/photo_3_2025-07-04_22-53-03.jpg
-
-img/photo_7_2025-07-04_22-53-03.jpg
-
+![Student Dashboard](img/photo_1_2025-07-04_22-53-03.jpg)
+![Course Exploration](img/photo_5_2025-07-04_22-53-03.jpg)
+![Admission Request](img/photo_3_2025-07-04_22-53-03.jpg)
+![Admin Dashboard](img/photo_7_2025-07-04_22-53-03.jpg)
 
 ### 👨‍🏫 Admin Panel
 
-!(img/photo_2_2025-07-04_22-53-03.jpg)
-!(img/photo_4_2025-07-04_22-53-03.jpg)
-!(img/photo_6_2025-07-04_22-53-03.jpg)
+![Student Management](img/photo_2_2025-07-04_22-53-03.jpg)
+![Payment Reports](img/photo_6_2025-07-04_22-53-03.jpg)
+![Batch and Feedback](img/photo_4_2025-07-04_22-53-03.jpg)
 
 ## 📁 Folder Structure
 
