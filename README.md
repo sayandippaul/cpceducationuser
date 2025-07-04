@@ -63,8 +63,9 @@ This is website github for all the students
 
 !(img/photo_1_2025-07-04_22-53-03.jpg)
 !(img/photo_2_2025-07-04_22-53-03.jpg)
-!(img/photo_3_2025-07-04_22-53-03.jpg)
-!(img/photo_7_2025-07-04_22-53-03.jpg)
+img/photo_3_2025-07-04_22-53-03.jpg
+
+img/photo_7_2025-07-04_22-53-03.jpg
 
 
 ### 👨‍🏫 Admin Panel
